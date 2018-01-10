@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.meat.JsskActivity">
+    <EditText
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:ems="10"/>
+    <android.support.v7.widget.Toolbar style="@style/toolbg"
+        android:layout_marginBottom="10sp">
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/toolback"
+            android:background="@mipmap/back"
+            android:onClick="btnback" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/tooltitle"
+            android:text="结算" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:layout_marginLeft="15px">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5px"
+                android:text="共"
+                android:textSize="18px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5px"
+                android:text="5"
+                android:textColor="#ffff0000"
+                android:textSize="32px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:text="笔交易"
+                android:textSize="18px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5px"
+                android:text="共"
+                android:textSize="18px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5px"
+                android:text="6460.00"
+                android:textColor="#ffff0000"
+                android:textSize="32px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textSize="18px" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center|center_horizontal"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/lllogin"
+                android:orientation="vertical"
+                style="@style/cardbg"
+                android:background="@drawable/cardbg">
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/etcard"
+                    android:drawableLeft="@mipmap/card_black"
+                    android:hint="请读取交易卡"
+                    style="@style/cardinput"
+                    android:maxLength="10"
+                    android:focusableInTouchMode="false" />
+                <View
+                    android:id="@+id/div_tab_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#ffffffff" />
+                <EditText
+                    android:inputType="numberPassword"
+                    android:id="@+id/etpassword"
+                    android:drawableLeft="@mipmap/pass_black"
+                    android:hint="请输入密码"
+                    style="@style/cardinput"
+                    android:maxLength="8" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnlogin"
+                style="@style/btnbig"
+                android:background="@drawable/btn"
+                android:onClick="btnqrjs"
+                android:text="确认结算" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/keylayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loginbg"
+                android:layout_gravity="center|center_vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+                <android.inputmethodservice.KeyboardView
+                    android:id="@+id/keyboardview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center|center_vertical"
+                    android:background="#00ffffff"
+                    android:focusable="true"
+                    android:keyBackground="@drawable/calculator_button_bg"
+                    android:keyTextColor="@color/colorWhite"
+                    android:keyTextSize="30.0sp"
+                    android:shadowColor="#ffffffff"
+                    android:shadowRadius="0.0"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

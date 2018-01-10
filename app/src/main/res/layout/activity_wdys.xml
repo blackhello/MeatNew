@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.meat.MyActivity">
+    <android.support.v7.widget.Toolbar style="@style/toolbg"
+        android:layout_marginBottom="5sp">
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/toolback"
+            android:background="@mipmap/back"
+            android:onClick="btnback" />
+        <TextView
+            android:id="@+id/textView"
+            style="@style/tooltitle"
+            android:text="我的应收" />
+    </android.support.v7.widget.Toolbar>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listtitle"
+        android:layout_below="@id/otherbtn"
+        android:stretchColumns="0"
+        android:layout_marginTop="5px"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="客户"
+                android:textColor="#ffe13a00"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="已出账单"
+                android:textColor="#ffe13a00"
+                android:layout_width="160px"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="未出账单"
+                android:textColor="#ffe13a00"
+                android:layout_weight="1"
+                android:layout_width="160px" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="明细"
+                android:textColor="#ffe13a00"
+                android:layout_weight="1"
+                android:layout_width="100px"/>
+
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/listall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/priceall"
+        android:layout_alignBottom="@+id/priceall"
+        android:layout_alignEnd="@+id/priceall"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignStart="@+id/listtitle"
+        android:layout_below="@+id/listtitle"
+        android:layout_marginBottom="10px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="5px"
+            android:stretchColumns="0">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉新鑫佳业商贸有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="3000.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉市喧天仪表有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="6000.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉体检验检技术有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="2400.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="湖北建研测控集团有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="1680.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉新鑫佳业商贸有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="1580.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉市喧天仪表有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="1480.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉体检验检技术有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="1450.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="湖北建研测控集团有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="2450.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉新鑫佳业商贸有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="3780.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉市喧天仪表有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="5360.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉体检验检技术有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="6700.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="湖北建研测控集团有限公司" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="3450.0"
+                    android:layout_width="160px"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|right"
+                    android:text="300.0"
+                    android:layout_width="160px" />
+                <Button
+                    style="@style/btn"
+                    android:layout_width="80px"
+                    android:layout_height="wrap_content"
+                    android:text="明细"
+                    android:onClick="btnmx"
+                    tools:ignore="OnClick"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

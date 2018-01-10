@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.meat.SkmxActivity">
+    <android.support.v7.widget.Toolbar style="@style/toolbg"
+        android:layout_marginBottom="5sp">
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/toolback"
+            android:background="@mipmap/back"
+            android:onClick="btnback" />
+        <TextView
+            style="@style/tooltitle"
+            android:text="收款" />
+        <TextView
+            style="@style/tooltitle"
+            android:text="（交易明细）"
+            android:textSize="18px"/>
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listtitle"
+        android:layout_below="@id/otherbtn"
+        android:stretchColumns="*"
+        android:layout_marginTop="5px"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="品名"
+                android:textColor="#ffe13a00"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="重量(kg)"
+                android:textColor="#ffe13a00" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="单价（元/kg）"
+                android:textColor="#ffe13a00" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="总价(元)"
+                android:textColor="#ffe13a00" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="日期"
+                android:layout_columnWeight="3"
+                android:textColor="#ffe13a00"
+                android:layout_width="60px"/>
+
+
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/listall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/priceall"
+        android:layout_alignBottom="@+id/priceall"
+        android:layout_alignEnd="@+id/priceall"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignStart="@+id/listtitle"
+        android:layout_below="@+id/listtitle"
+        android:layout_marginBottom="10px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="5px"
+            android:stretchColumns="0,1,2,3">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-1"
+                    android:textSize="20sp"
+                    android:layout_width="60px"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-4"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-6"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-8"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-10"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-16"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-20"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-24"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-26"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-30"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-31"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-31"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-31"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-31"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-31"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-31"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-31"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-31"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-31"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-31"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="2017-1-31"
+                    android:textSize="20sp" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.meat.MyActivity">
+    <android.support.v7.widget.Toolbar style="@style/toolbg"
+        android:layout_marginBottom="5sp">
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/toolback"
+            android:background="@mipmap/back"
+            android:onClick="btnback" />
+        <TextView
+            android:id="@+id/textView"
+            style="@style/tooltitle"
+            android:text="我的交易" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:id="@+id/layouta
+">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间:"
+            android:textSize="24px"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/datastart"
+            android:layout_width="180px"
+            android:layout_height="wrap_content"
+            android:text="开始时间"
+            android:textSize="24px"
+            android:layout_gravity="center"
+            style="@style/input"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="至"
+            android:textSize="24px"
+            android:layout_gravity="center" />
+        <EditText
+            android:id="@+id/dataend"
+            android:layout_width="180px"
+            android:layout_height="wrap_content"
+            android:text="结束时间"
+            android:textSize="24px"
+            android:layout_gravity="center"
+            style="@style/input" />
+<!--        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="供应商："
+            android:textSize="20px"
+            android:layout_gravity="center" />
+        <Spinner
+            android:id="@+id/gysname"
+            style="@style/spinner"
+            android:textSize="20px"
+            android:layout_width="230px"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="采购商:"
+            android:layout_gravity="center" />
+        <Spinner
+            android:id="@+id/cgspname"
+            style="@style/spinner"
+            android:textSize="20px"
+            android:layout_width="230px"/>-->
+        <Button
+            style="@style/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn"
+            android:text="查询" />
+
+
+    </LinearLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listtitle"
+        android:layout_below="@id/otherbtn"
+        android:stretchColumns="*"
+        android:layout_marginTop="5px"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="品名"
+                android:textColor="#ffe13a00"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="重量(kg)"
+                android:textColor="#ffe13a00" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="单价（元/kg）"
+                android:textColor="#ffe13a00" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="总价(元)"
+                android:textColor="#ffe13a00" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="卖家"
+                android:layout_columnWeight="3"
+                android:textColor="#ffe13a00"
+                android:layout_width="220px"/>
+
+
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/listall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/priceall"
+        android:layout_alignBottom="@+id/priceall"
+        android:layout_alignEnd="@+id/priceall"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignStart="@+id/listtitle"
+        android:layout_below="@+id/listtitle"
+        android:layout_marginBottom="10px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="5px"
+            android:stretchColumns="0,1,2,3">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉新鑫佳业商贸有限公司"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉市喧天仪表有限公司"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉体检验检技术有限公司"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="湖北建研测控集团有限公司"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉新鑫佳业商贸有限公司"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉市喧天仪表有限公司"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉体检验检技术有限公司"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="湖北建研测控集团有限公司"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉新鑫佳业商贸有限公司"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉市喧天仪表有限公司"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="武汉体检验检技术有限公司"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="猪耳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="300.0"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="3.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="991.00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center|left"
+                    android:text="湖北建研测控集团有限公司"
+                    android:textSize="20sp" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

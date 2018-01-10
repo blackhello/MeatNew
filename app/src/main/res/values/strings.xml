@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">四季美猪肉交易系统</string>
+    <string name="mainname">四季美猪肉交易系统</string>
+    <string name="mainjy">交　　易</string>
+    <string name="mainsk">收　　款</string>
+    <string name="mainjz">结　　账</string>
+    <string name="mainmy">我　　的</string>
+    <string name="msgtitle">信息提示</string>
+    <string name="msgcontent_outline">网络出错，请重试！</string>
+    <string name="msgcontent_passwordEorr">密码错误，请重新输入！</string>
+    <!--
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    -->
+
+    <string name="error_configuration">Please configure your serial port first.(请先配置串行端口)</string>
+    <string name="error_security">You do not have read/write permission to the serial port.(你没有串口的读/写权限。)</string>
+    <string name="error_unknown">The serial port can not be opened for an unknown reason.(串行端口不能打开一个未知的原因)</string>
+    <string name="title_activity_khlb">khlbActivity</string>
+</resources>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.meat.JylistActivity">
+    <android.support.v7.widget.Toolbar style="@style/toolbg"
+        android:layout_marginBottom="10sp">
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/toolback"
+            android:background="@mipmap/back"
+            android:onClick="btnback" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/tooltitle"
+            android:text="交易" />
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/otherbtn"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button
+            android:id="@+id/btnadd"
+            style="@style/btn"
+            android:layout_width="80sp"
+            android:layout_height="40sp"
+            android:background="@drawable/btngreen"
+            android:onClick="btnadd"
+            android:text="新增" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center" />
+        <Button
+            android:text="挂起"
+            android:id="@+id/btngq"
+            android:layout_width="80sp"
+            android:layout_height="40sp"
+            style="@style/btn"
+            android:onClick="btngq"
+            android:background="@drawable/btnblue" />
+
+        <Button
+            android:id="@+id/btnjs"
+            style="@style/btn"
+            android:layout_width="80sp"
+            android:layout_height="40sp"
+            android:background="@drawable/btn"
+            android:onClick="btnjs"
+            android:text="结算" />
+
+        <Button
+            android:id="@+id/btnsx"
+            style="@style/btn"
+            android:layout_width="80sp"
+            android:layout_height="40sp"
+            android:background="@drawable/btnblack"
+            android:onClick="btncx"
+            android:text="撤销" />
+    </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listtitle"
+            android:layout_below="@id/otherbtn"
+            android:stretchColumns="0,1,2,3"
+            android:layout_marginTop="5px"
+            android:layout_marginBottom="5px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="品名"
+                    android:textColor="#ffe13a00"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="重量(kg)"
+                    android:textColor="#ffe13a00" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="单价（元/kg）"
+                    android:textColor="#ffe13a00" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="总价(元)"
+                    android:textColor="#ffe13a00" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+            </TableRow>
+        </TableLayout>
+
+        <ScrollView
+            android:id="@+id/listall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/priceall"
+            android:layout_alignBottom="@+id/priceall"
+            android:layout_alignEnd="@+id/priceall"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignStart="@+id/listtitle"
+            android:layout_below="@+id/listtitle">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5px"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="10px"
+                android:layout_marginTop="5px"
+                android:stretchColumns="0,1,2,3">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="猪耳" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="300.0" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="3.00" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="991.00" />
+
+                    <Button
+                        style="@style/btn"
+                        android:layout_width="56sp"
+                        android:layout_height="28sp"
+                        android:background="@drawable/btnblack"
+                        android:text="删除"
+                        android:textSize="14sp"
+                        android:onClick="btndel"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="猪耳" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="300.0" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="3.00" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="991.00" />
+
+                    <Button
+                        style="@style/btn"
+                        android:layout_width="56sp"
+                        android:layout_height="28sp"
+                        android:background="@drawable/btnblack"
+                        android:text="删除"
+                        android:textSize="14sp"
+                        android:onClick="btndel" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="猪耳" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="300.0" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="3.00" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="991.00" />
+
+                    <Button
+                        style="@style/btn"
+                        android:layout_width="56sp"
+                        android:layout_height="28sp"
+                        android:background="@drawable/btnblack"
+                        android:text="删除"
+                        android:textSize="14sp"
+                        android:onClick="btndel" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="猪耳" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="300.0" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="3.00" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="991.00" />
+
+                    <Button
+                        style="@style/btn"
+                        android:layout_width="56sp"
+                        android:layout_height="28sp"
+                        android:background="@drawable/btnblack"
+                        android:text="删除"
+                        android:textSize="14sp"
+                        android:onClick="btndel" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="猪耳" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="300.0" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="3.00" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="991.00" />
+
+                    <Button
+                        style="@style/btn"
+                        android:layout_width="56sp"
+                        android:layout_height="28sp"
+                        android:background="@drawable/btnblack"
+                        android:text="删除"
+                        android:textSize="14sp"
+                        android:onClick="btndel" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="猪耳" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="300.0" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="3.00" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="991.00" />
+
+                    <Button
+                        style="@style/btn"
+                        android:layout_width="56sp"
+                        android:layout_height="28sp"
+                        android:background="@drawable/btnblack"
+                        android:text="删除"
+                        android:textSize="14sp"
+                        android:onClick="btndel" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="猪耳" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="300.0" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="3.00" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="991.00" />
+
+                    <Button
+                        style="@style/btn"
+                        android:layout_width="56sp"
+                        android:layout_height="28sp"
+                        android:background="@drawable/btnblack"
+                        android:text="删除"
+                        android:textSize="14sp"
+                        android:onClick="btndel" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="猪耳" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="300.0" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="3.00" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="991.00" />
+
+                    <Button
+                        style="@style/btn"
+                        android:layout_width="56sp"
+                        android:layout_height="28sp"
+                        android:background="@drawable/btnblack"
+                        android:text="删除"
+                        android:textSize="14sp"
+                        android:onClick="btndel" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="猪耳" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="300.0" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="3.00" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="991.00" />
+
+                    <Button
+                        style="@style/btn"
+                        android:layout_width="56sp"
+                        android:layout_height="28sp"
+                        android:background="@drawable/btnblack"
+                        android:text="删除"
+                        android:textSize="14sp"
+                        android:onClick="btndel" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="猪耳" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="300.0" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="3.00" />
+
+                    <TextView
+                        android:layout_columnWeight="1"
+                        android:layout_gravity="center|left"
+                        android:text="991.00" />
+
+                    <Button
+                        style="@style/btn"
+                        android:layout_width="56sp"
+                        android:layout_height="28sp"
+                        android:background="@drawable/btnblack"
+                        android:text="删除"
+                        android:textSize="14sp"
+                        android:onClick="btndel" />
+                </TableRow>
+
+            </TableLayout>
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/priceall"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:layout_alignParentBottom="true"
+            android:background="#ffcccccc">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="200dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5px"
+                    android:text="共"
+                    android:textSize="18px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5px"
+                    android:text="5"
+                    android:textColor="#ffff0000"
+                    android:textSize="32px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:text="笔交易"
+                    android:textSize="18px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5px"
+                    android:text="共"
+                    android:textSize="18px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5px"
+                    android:text="6460.00"
+                    android:textColor="#ffff0000"
+                    android:textSize="32px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="元"
+                    android:textSize="18px" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

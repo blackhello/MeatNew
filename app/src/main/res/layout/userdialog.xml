@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/create_user_dialog_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:minWidth="300px"
+        android:minHeight="260px">
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                style="@style/MyDialogTitle"
+                android:layout_width="match_parent"
+                android:text="信息提示"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialogcontextbg">
+            <TextView
+                android:id="@+id/tv_dialog_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:textSize="20px"
+                android:padding="3dp"
+                android:text="sdfasfasdfsadf"
+                android:textColor="#404143"
+                android:background="#ffffff" />
+
+        </LinearLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btndown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            >
+            <Button
+                android:id="@+id/dialog_btn_ok"
+                style="@style/btnmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btnmsg"
+                android:text="是"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/dialog_btn_no"
+                style="@style/btnmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btnblack_msg"
+                android:text="否"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/dialog_btn_cancel"
+                style="@style/btnmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btngreen_msg"
+                android:text="取消"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="50px"
+            android:layout_gravity="top|right"
+            app:srcCompat="@mipmap/close1"
+            android:layout_marginTop="5px"/>
+
+</FrameLayout>

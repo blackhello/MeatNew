@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/mainbg"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar style="@style/toolbg"
+        android:layout_marginBottom="10sp">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/tooltitle"
+            android:text="@string/app_name" />
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:id="@+id/btn_jy"
+        style="@style/mainbtn"
+        android:drawableLeft="@mipmap/jy"
+        android:drawableRight="@mipmap/jian"
+        android:text="交　　易" />
+
+    <Button
+        android:id="@+id/btn_sk"
+        style="@style/mainbtn"
+        android:drawableLeft="@mipmap/sk"
+        android:drawableRight="@mipmap/jian"
+        android:text="收　　款" />
+
+    <Button
+        android:id="@+id/btn_jz"
+        style="@style/mainbtn"
+        android:drawableLeft="@mipmap/jz"
+        android:drawableRight="@mipmap/jian"
+        android:text="结　　账" />
+
+    <Button
+        android:id="@+id/btn_my"
+        style="@style/mainbtn"
+        android:drawableLeft="@mipmap/my"
+        android:drawableRight="@mipmap/jian"
+        android:text="我　　的" />
+
+
+</LinearLayout>
+

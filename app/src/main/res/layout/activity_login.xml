@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@mipmap/loginbg"
+    tools:context="com.example.meat.LoginActivity">
+
+    <EditText
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:ems="10"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center|center_horizontal"
+        android:layout_weight="1">
+        <ImageView
+            android:src="@mipmap/logo"
+            android:layout_width="90px"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1"
+            android:layout_gravity="center" />
+        <TextView
+            android:text="四季美猪肉交易系统"
+            android:id="@+id/tvlogo"
+            style="@style/logintext" />
+        <LinearLayout
+            android:id="@+id/lllogin"
+            android:orientation="vertical"
+            style="@style/loginbg"
+            android:background="@drawable/loginbg">
+
+            <EditText
+                android:id="@+id/etcard"
+                style="@style/logininput"
+                android:drawableLeft="@mipmap/card_white"
+                android:hint="请读取交易卡"
+                android:inputType="textVisiblePassword"
+                android:focusableInTouchMode="false"
+                android:maxLength="10" />
+            <View
+                android:id="@+id/div_tab_bar"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#ffffffff" />
+            <EditText
+                android:inputType="numberPassword"
+                android:id="@+id/etpassword"
+                android:drawableLeft="@mipmap/pass_white"
+                android:hint="请输入密码"
+                style="@style/logininput"
+                android:maxLength="8"
+                android:ems="10"  />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnlogin"
+            style="@style/btnbig"
+            android:background="@drawable/btn"
+            android:onClick="btnlogin"
+            android:text="登　录" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center|center_vertical"
+        android:layout_weight="1">
+<LinearLayout
+    android:id="@+id/keylayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/loginbg"
+    android:layout_gravity="center|center_vertical"
+    android:padding="5dp"
+    android:visibility="gone">
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboardview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center|center_vertical"
+            android:background="#00ffffff"
+            android:focusable="true"
+            android:keyBackground="@drawable/calculator_button_bg"
+            android:keyTextColor="@color/colorWhite"
+            android:keyTextSize="30.0sp"
+            android:shadowColor="#ffffffff"
+            android:shadowRadius="0.0"
+            android:visibility="gone"/>
+</LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

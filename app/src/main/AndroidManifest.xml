@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.meat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".JyActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SkActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".JzActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MyActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".JylistActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".JsskActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".WdjyActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".WdysActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".WdyfActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SpaqActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".DateDialogActivity" />
+        <activity android:name=".SkzdActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".SkmxActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".JzmxActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".JzzdActivity"
+            android:screenOrientation="landscape"></activity>
+    </application>
+
+</manifest>
