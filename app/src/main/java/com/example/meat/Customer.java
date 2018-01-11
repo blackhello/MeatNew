@@ -5,12 +5,10 @@ import android.util.Base64DataException;
 
 import java.sql.Date;
 
-/**
- * Created by 王刚 on 2018/01/04.
- */
-
 public class Customer extends Application {
     private Integer wk;
+
+    
     private Integer CustomerID;
     private Boolean IsSaler;
     private Integer MemberTypeID;
