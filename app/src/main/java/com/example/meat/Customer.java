@@ -6,6 +6,10 @@ import android.util.Base64DataException;
 import java.sql.Date;
 
 public class Customer extends Application {
+
+
+
+    
     private Integer CustomerID;
     private Boolean IsSaler;
     private Integer MemberTypeID;
